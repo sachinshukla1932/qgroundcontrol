@@ -13,7 +13,7 @@
  *   @brief Implementation of class QGCApplication
  *
  *   @author Lorenz Meier <mavteam@student.ethz.ch>
- *
+ *first commit
  */
 
 #include <QFile>
