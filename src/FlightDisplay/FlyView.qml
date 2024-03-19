@@ -186,6 +186,34 @@ Item {
             color:              qgcPal.window
             visible:            false
         }
+        Button{
+            id:lab
+            visible: false
+            text: ""
+             z:         QGroundControl.zOrderTopMost
+            anchors.centerIn: parent
+        }
+
+        Grid {
+            columns:3
+            anchors.margins:    _toolsMargin
+            anchors.right:      parent.right
+            anchors.bottom:     parent.bottom
+            z:         QGroundControl.zOrderTopMost
+            Repeater {
+                model: 9
+                Button{
+                    required property int index
+                    text: index
+                    onPressedChanged:  {
+                        lab.visible=!lab.visible
+                        lab.text=index
+                    }
+                }
+
+            }
+        }
+
 
         Viewer3D{
             id:                     viewer3DWindow

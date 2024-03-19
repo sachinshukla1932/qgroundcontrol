@@ -82,7 +82,14 @@ Rectangle {
             visible:            _activeVehicle && _communicationLost
         }
     }
-
+    Button{
+        id:logout
+        visible: true
+        text: "logout"
+         z:         QGroundControl.zOrderTopMost
+        anchors.right: parent.right
+        anchors.top: parent.top
+    }
     QGCFlickable {
         id:                     toolsFlickable
         anchors.leftMargin:     ScreenTools.defaultFontPixelWidth * ScreenTools.largeFontPointRatio * 1.5
